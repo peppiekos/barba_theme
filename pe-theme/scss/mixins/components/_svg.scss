@@ -1,0 +1,14 @@
+@mixin svg-link-primary{
+    display: flex;
+    
+    svg *{
+        transition: 0.3s;
+        stroke: $primary-text;
+        stroke-width: 1px;
+    }
+    &:hover{
+        svg *{
+            stroke: $primary-text-accent;
+        }
+    }
+}

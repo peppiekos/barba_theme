@@ -1,0 +1,21 @@
+@mixin image{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin: 0px;
+}
+
+//Apply to img wrapper
+@mixin image-hover{
+    overflow: hidden;
+    display: flex;
+    & img{
+        transition: 0.5s;        
+    }
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
+

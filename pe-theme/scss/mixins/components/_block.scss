@@ -1,0 +1,9 @@
+@mixin block-base{
+    padding: 32px;
+    border-radius: 0px;
+}
+
+@mixin block-secondary{
+    @include block-base;
+    background: $secondary-accent;
+}

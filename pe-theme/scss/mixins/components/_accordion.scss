@@ -1,0 +1,51 @@
+
+  @mixin accordion-secondary{
+    .toggle {
+        @include h4;
+        @include text-secondary;
+        @include flex-space-between-center;
+        background-color: $secondary;
+        border: none;
+        border-bottom: 1px solid $secondary-text;
+        cursor: pointer;
+        padding-left: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        transition: 0.3s;
+        &:first-of-type{
+            border-top: 1px solid $secondary-text;
+        }
+        &::after{
+            content: "";
+            border: solid $secondary-text;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 7px;
+            margin-top: -7px;
+            transition: 0.3s;
+            transform: rotate(45deg);
+        }
+        &.open{
+            &::after{
+                transform: rotate(225deg);
+                margin-top: 0;
+                margin-bottom: -7px;
+            }
+        }
+      }    
+      
+
+      .panel {
+        background-color: $secondary;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        .panel-inner{
+            padding: 20px;
+        }
+      }
+  }

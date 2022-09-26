@@ -1,0 +1,4 @@
+@function calc-width($columns, $gutters: auto){
+    $gutters: if($gutters == auto, $columns - 1, $gutters);
+    @return ($columns * $column-width) + ($gutters * $column-gutter);
+}

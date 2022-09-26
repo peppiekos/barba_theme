@@ -1,0 +1,6 @@
+@mixin remove-pseudo{
+    &::before,
+    &::after{
+        display: none;
+    }
+}

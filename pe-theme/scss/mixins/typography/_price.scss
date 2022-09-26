@@ -1,0 +1,10 @@
+@mixin price{
+    @include text;
+    @include text-secondary;
+    
+    ins{
+        margin-left: 10px;
+        text-decoration: none;
+        font-weight: 400;
+    }
+}

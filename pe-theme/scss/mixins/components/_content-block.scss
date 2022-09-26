@@ -1,0 +1,9 @@
+@mixin content-block{
+    margin-bottom: calc-width(0,1);
+    *:first-child{
+        margin-top: 0px;
+    }
+    *:last-child{
+        margin-bottom: 0px;
+    }
+}

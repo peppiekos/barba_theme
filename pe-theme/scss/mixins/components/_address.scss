@@ -1,0 +1,8 @@
+@mixin address-secondary{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    border-top: 1px solid $secondary-text;
+    border-radius: 0px;
+    padding-top: 20px;
+}

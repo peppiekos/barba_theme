@@ -1,0 +1,121 @@
+@mixin table-secondary($columns, $bigger-columns: [], $smaller-columns: []){
+    border: none;
+    border-spacing: 0px;
+
+    $total-width: 100%;
+    $padding-right: calc-width(0, 1);
+    
+    //Calc column width
+    $col-width: $total-width / $columns;
+    $big-col-width: $col-width * 1.5;
+    $small-col-width: $col-width / 2;
+    $total-width: $total-width - ($big-col-width * length($bigger-columns));
+    $total-width: $total-width - ($small-col-width * length($smaller-columns));
+    $col-width: $total-width / ($columns - (length($bigger-columns) + length($smaller-columns)));
+    $big-col-width: calc(#{$big-col-width} + #{$padding-right});
+    $small-col-width: calc(#{$small-col-width} + #{$padding-right});
+    $col-width: calc(#{$col-width} + #{$padding-right});
+
+    thead{
+        tr{
+            th{
+                @include text;
+                @include text-secondary;
+                padding-top: 0px;
+                padding-bottom: 20px;
+                padding-left: 0px;
+                padding-right: 0px;
+                max-width: $col-width;
+                padding-right: $padding-right;
+                & *{
+                    @include text;
+                    @include text-secondary;
+                }
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                @include text;
+                @include text-secondary;
+                border-top: 1px solid $primary-text-accent;
+                padding: 20px 0px;
+                max-width: $col-width;
+                padding-right: $padding-right;
+                & *{
+                    @include text;
+                    @include text-secondary;
+                }
+                & a{
+                    @include text-link-secondary;
+                }
+            }
+        }
+    }
+    tfoot{
+        tr{
+            td,
+            th{
+                @include text;
+                @include text-secondary;
+                border-top: 1px solid $primary-text-accent;
+                padding: 20px 0px;
+                max-width: $col-width;
+                padding-right: $padding-right;
+                & *{
+                    @include text;
+                    @include text-secondary;
+                }
+            }
+        }
+    }
+
+    @each $bigcol in $bigger-columns{
+        thead{
+            tr{
+                th:nth-child(#{$bigcol}){
+                    max-width: $big-col-width;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td:nth-child(#{$bigcol}){
+                    max-width: $big-col-width;
+                }
+            }
+        }
+        tfoot{
+            tr{
+                *:nth-child(#{$bigcol}){
+                    max-width: $big-col-width;
+                }
+            }
+        }
+    }
+
+    @each $smallcol in $smaller-columns{
+        thead{
+            tr{
+                th:nth-child(#{$smallcol}){
+                    max-width: $small-col-width;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td:nth-child(#{$smallcol}){
+                    max-width: $small-col-width;
+                }
+            }
+        }
+        tfoot{
+            tr{
+                *::nth-child(#{$smallcol}){
+                    max-width: $small-col-width;
+                }
+            }
+        }
+    }
+}

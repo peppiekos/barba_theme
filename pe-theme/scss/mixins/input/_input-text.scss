@@ -1,0 +1,19 @@
+@mixin input-text-base{
+    @include text;
+    outline: none;
+    border: none;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    resize: none;
+}
+@mixin input-text-secondary{
+    @include input-text-base;
+    @include text-secondary;
+    background: transparent;
+    border-bottom: 1px solid $secondary-text;
+}
+
+@mixin input-textarea-secondary{
+    @include input-text-secondary;
+    max-height: calc-width(2);
+}

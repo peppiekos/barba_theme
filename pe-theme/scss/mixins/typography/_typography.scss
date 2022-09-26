@@ -1,0 +1,117 @@
+@mixin h1{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: -1px;
+    font-family: $heading-font;
+    @media screen and (max-width:500px){
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+@mixin h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.75px;
+    font-family: $heading-font;
+    @media screen and (max-width:500px){
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+
+@mixin h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+    font-family: $heading-font;
+    @media screen and (max-width:500px){
+        font-size: 21px;
+        line-height: 27px;
+    }
+}
+
+@mixin h4{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-family: $heading-font;
+}
+
+@mixin h5{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0px;
+    font-family: $heading-font;
+    
+}
+
+@mixin text-base{
+    font-weight: 400;
+    letter-spacing: 0px;
+    word-break: break-word;
+    font-family: $text-font;
+    & mark{
+        background: none;
+        text-decoration: none;
+        padding-bottom: 2px;
+    }
+}
+@mixin text{
+    @include text-base;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin text-small{
+    @include text-base;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@mixin text-primary{
+    color: $primary-text;
+    & mark{
+        border-bottom: 1px solid $primary-text;
+    }
+}
+
+@mixin text-primary-hover{
+    transition: 0.3s;
+    &:hover{
+        color: $primary-text-accent;
+    }
+}
+
+@mixin text-secondary{
+    color: $secondary-text;
+    & mark{
+        border-bottom: 1px solid $secondary-text;
+    }
+}
+
+@mixin text-secondary-hover{
+    transition: 0.3s;
+    &:hover{
+        color: $secondary-text-accent;
+    }
+}
+
+@mixin text-primary-accent{
+    color: $primary-text-accent;
+}
+
+@mixin text-secondary-accent{
+    color: $secondary-text-accent;
+}
+
+@mixin text-link-secondary{
+    @include text-secondary;
+    @include text-secondary-hover;
+    text-decoration: underline;
+}

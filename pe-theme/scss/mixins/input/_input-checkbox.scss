@@ -1,0 +1,38 @@
+@mixin input-checkbox-base($background, $color){
+    cursor: pointer;
+    height: 100%;
+    width: 0px;
+    margin-right: 45px;
+    margin-left: 3px;
+    position: relative;
+    &::before{
+        content: ' ';
+        height: 20px;
+        width: 20px;
+        background: $background;
+        border: 1px solid $color;
+        display: block;
+    }
+    &:checked::after{
+        content: " ";
+        width: 7px;
+        height: 12px;
+        border: solid $color;
+        border-width: 0px 1px 1px 0px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 2px;
+        left: 7px;
+    }
+}
+
+@mixin input-checkbox-secondary{
+    @include input-checkbox-base(transparent, $secondary-text);
+    & ~ span{
+        @include text;
+        @include text-secondary;
+        cursor: pointer;
+    }
+}

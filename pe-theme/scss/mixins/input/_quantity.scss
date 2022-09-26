@@ -1,0 +1,22 @@
+@mixin quantity-input-base{
+    @include flex-space-between-center;
+    padding: 4px 0px;
+    a{
+        @include text;
+    }
+    input{
+        @include text;
+        outline: none;
+        border: none;
+        text-align: center
+    }
+}
+@mixin quantity-input-primary{
+    @include quantity-input-base;
+    border: 1px solid $primary-text;
+    a,
+    input{
+        @include text-primary;
+        background: $primary;
+    }
+}

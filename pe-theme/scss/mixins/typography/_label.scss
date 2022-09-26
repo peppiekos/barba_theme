@@ -1,0 +1,10 @@
+@mixin label-secondary{
+    @include text-small;
+    @include text-primary-accent;
+    text-transform: uppercase;
+    & *{
+        @include text-small;
+        @include text-primary-accent;
+        text-transform: uppercase;
+    }
+}

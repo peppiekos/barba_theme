@@ -1,0 +1,71 @@
+@mixin flex-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-space-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-normal-center{
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+}
+
+@mixin flex-space-between-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin flex-space-between-center-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-column-space-between{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin flex-column-space-between-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-column-flex-end{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-align-center{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row-reverse-align-center{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}

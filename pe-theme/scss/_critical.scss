@@ -1,0 +1,90 @@
+/* All CSS WE NEED ABOVE THE FOLD */
+*, 
+::before,
+::after {
+     box-sizing: border-box;
+}
+html {
+    overflow-x: hidden; 
+    width: 100%; 
+    max-width: 2560px; 
+    margin: 0 auto;
+    a{
+        text-decoration: none;
+    }
+    body {
+        margin: 0px auto; 
+        padding: 0px; 
+        // Volgens mij kan deze weg omdat in html a hetzelfde gedefinieerd is, en deze dus geinherit word
+        // a{
+        //     text-decoration: none;
+        // }
+    }
+    button, 
+    input, 
+    select, 
+    optgroup, 
+    textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0px;
+    }
+    button,
+    select {
+        text-transform: none;
+    }
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"]{
+        -webkit-appearance: button;
+    }
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0px;
+    }
+    .screen-reader-text{
+        border: none;
+        clip: rect(1px,1px,1px,1px);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0px;
+        position: absolute !important;
+        width: 1px;
+        word-wrap: normal !important
+    }
+    .screen-reader-text:focus{
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+        clip: auto !important;
+        clip-path: none;
+        color: #21759b;
+        display: block;
+        font-size: .875rem;
+        font-weight: 700;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000;
+    }
+    #primary[tabindex="-1"]:focus{
+        outline: 0;
+    }
+}
+
+
+
+
+
+

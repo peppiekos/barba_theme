@@ -1,0 +1,24 @@
+@mixin woo-pagination{
+    @include flex-center;
+    border: none;
+}
+@mixin woo-pagination-button{
+    border: none;
+    margin: 0px 5px;
+
+    a,
+    span{
+        @include pill-primary;
+        padding: 5px 0px !important;
+        width: 30px !important;
+    }
+    a{
+        &:hover{
+            @include pill-primary-reverse;
+        }
+    }
+    span.current{
+        @include pill-primary-reverse;
+        border: 1px solid $primary;
+    }
+}

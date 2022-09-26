@@ -1,0 +1,86 @@
+// Select elements need to be wrapped.
+
+@mixin select-base($color: transparent){
+    position: relative;
+    select{
+        @include text;
+        height: 48px;
+        padding-left: 20px;
+        padding-right: 40px;
+        width: 100%;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    &::after{
+        content: " ";
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 9px solid $color;
+        position: absolute;
+        right: 15px;
+        top: calc(50% - 4.5px);
+    }
+}
+
+@mixin select-primary{
+    @include select-base($primary-text);
+    select{
+        background-color: $primary;
+        border: 1px solid $primary-text;
+        color: $primary-text;
+    }
+}
+
+@mixin select-secondary{
+    @include select-base($secondary-text);
+    select{
+        background-color: $secondary;
+        border: 1px solid $secondary-text;
+        color: $secondary-text;
+    }
+}
+
+@mixin select2-base{
+    
+}
+@mixin select2-secondary{
+    @include select2-base;
+    .select2-selection{
+        background: $secondary;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid $secondary-text;
+        border-radius: 0px;
+        padding-bottom: 10px;
+        .select2-selection__rendered{
+            padding: 0px;
+        }
+        .select2-selection__arrow{
+            b{
+                display: none;
+            }
+            &::after{
+                content: "";
+                border: solid $secondary-text;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 5px;
+                margin-bottom: 5px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+//Styling van de dropdon van select2
+.select2-dropdown--below{
+    top: 5px;
+    background: $secondary-accent;
+    input[type="text"]{
+        background: $secondary-accent;
+    }
+}

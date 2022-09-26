@@ -1,0 +1,34 @@
+@mixin overflowing-swiper{
+    overflow: visible;
+    // .swiper-slide{
+    //     width: auto !important;
+    // }
+}
+
+@mixin product-swiper{
+    width: 100%;
+    --gutter: #{calc-width(0, 1)};
+    .swiper-wrapper{
+        .swiper-slide{
+            @include flex-column;
+            .product-image{
+                @include image-hover;
+                img{
+                    @include image;
+                    width: calc-width(3);
+                    height: calc-width(3);
+                }
+            }
+            .product-name{
+                @include h4;
+                @include text-secondary;
+                @include text-secondary-hover;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .price{
+                @include price;
+            }
+        }
+    }
+}

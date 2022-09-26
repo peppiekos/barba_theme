@@ -1,0 +1,77 @@
+@mixin woo-form-secondary{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    
+    h3{
+        @include page-heading;
+    }
+    .form-row{
+        @include flex-column-flex-end;
+        width: 100%;
+        padding:0px;
+        margin: 0px;
+        margin-bottom: calc-width(0,1);
+
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="email"]{
+            @include input-text-secondary;
+        }
+
+        textarea{
+            @include input-textarea-secondary;
+        }
+
+        .select2-container{
+            @include select2-secondary;
+        }
+    }
+    label:not(.woocommerce-form__label-for-checkbox){
+        @include label-secondary;
+    }
+
+    label.woocommerce-form__label-for-checkbox{
+        @include flex-align-center;
+        input[type="checkbox"]{
+            @include input-checkbox-secondary;
+        }
+    }
+
+    input[type="submit"],
+    button[type="submit"]{
+        @include button-primary;
+    }
+
+    fieldset{
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        legend{
+            @include h3;
+            @include page-heading;
+        }
+    }
+}
+
+@mixin woo-form-login-secondary{
+    @include woo-form-secondary;
+    .login-form-bottom{
+        .form-row{
+            @include flex-row-reverse-align-center;
+            button[type="submit"]{
+                width: calc-width(2);
+
+            }
+            label{
+                padding-left: calc-width(0, 1);
+            }
+        }
+        .lost_password{
+            a{
+                @include text-link-secondary;
+            }
+        }
+    }
+}

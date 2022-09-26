@@ -1,0 +1,25 @@
+@mixin pill-base{
+    @include text-small;
+    @include flex-center;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0px 20px;
+}
+
+@mixin pill-primary{
+    @include pill-base;
+    @include text-primary;
+    background: $primary;
+}
+
+@mixin pill-primary-reverse{
+    @include pill-base;
+    color: $primary;
+    background: $primary-text;
+}
+
+@mixin pill-secondary{
+    @include pill-base;
+    @include text-secondary;
+    background: $secondary;
+}

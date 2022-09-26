@@ -1,0 +1,95 @@
+@mixin button-base{
+    @include flex-center;
+    @include text;
+    margin: 0px;
+    transition: 0.3s;
+    padding: 10px 28px;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+
+    &.disabled{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    
+    &:disabled{
+        opacity: 0.5;
+    }
+}
+
+@mixin button-primary{
+    @include button-base;    
+    background: $primary;
+    color: $primary-text;
+
+    &:hover{
+        background: $primary-text;
+        color: $primary;
+    }
+
+    &:disabled{
+        background: $primary;
+        color: $primary-text;
+    }
+}
+
+@mixin button-primary-reverse{
+    @include button-base;    
+    background: $primary-text;
+    color: $primary;
+
+    &:hover{
+        background: $primary;
+        color: $primary-text;
+    }
+
+    &:disabled{
+        background: $primary-text;
+        color: $primary;
+    }
+}
+
+@mixin button-small-primary{
+    @include button-primary;
+    padding: 5px 14px;
+}
+
+@mixin button-small-primary-reverse{
+    @include button-primary-reverse;
+    padding: 5px 14px;
+}
+
+
+
+@mixin button-secondary{
+    @include button-base;
+    background: $secondary-text;
+    color: $secondary;
+
+    &:hover{
+        background: $secondary;
+        color: $secondary-text;
+    }
+
+    &:disabled{
+        background: $secondary-text;
+        color: $secondary;
+    }
+}
+
+@mixin button-secondary-reverse{
+    @include button-base;
+    background: $secondary;
+    color: $secondary-text;
+
+    &:hover{
+        background: $secondary-text;
+        color: $secondary;
+    }
+
+    &:disabled{
+        background: $secondary;
+        color: $secondary-text;
+    }
+}
