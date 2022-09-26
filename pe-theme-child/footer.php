@@ -1,0 +1,27 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package PE_Theme
+ */
+
+?>
+ </div><!-- barba wrapper -->
+
+            <footer id="colophon" class="site-footer">
+
+            </footer>
+
+       
+
+        <div class="cursor"></div>
+        <div class="follower"></div>
+
+    <?php wp_footer(); ?>
+
+    </body>
+</html>

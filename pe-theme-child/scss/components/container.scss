@@ -1,0 +1,17 @@
+.barba-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container{
+    width: 95%;
+    max-width: 1260px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:500px){
+    .container{
+        width: 90%;
+    }
+}

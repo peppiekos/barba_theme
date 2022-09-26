@@ -1,0 +1,34 @@
+html {
+    scroll-behaviour: smooth;
+    margin-top: 0px !important;
+}
+
+body {
+    height:100%;
+    min-height:100%;    
+    background-color: $platinum;
+}
+
+html, body {
+    max-width: 100vw;    
+} 
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+#barba-wrapper {
+    position: relative;
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    left: 108px;
+    width: calc(100% - 104px);
+    position: absolute;  
+
+}
